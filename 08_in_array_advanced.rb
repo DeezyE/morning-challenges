@@ -21,6 +21,12 @@
 #Don't use any helpers other than .each
 #Try writing it on a whiteboard or paper first
 def in_array_advanced (needle, haystack, strict)
-  # Your code here
-
+  haystack.each do |word|
+    if word == needle && strict == true
+      return true
+    elsif word.downcase == needle.downcase && strict == false
+      return true
+    end
+  end
+  return false
 end
