@@ -24,5 +24,13 @@
 #
 
 def nthFibonacci (n)
-  # Your code here    
+  fibarray = [0,1]
+  a = fibarray[0]
+  b = fibarray[1]
+  counter = 0
+  while counter < 100
+    fibarray.push(fibarray[-2] + fibarray[-1])
+    counter += 1
+  end
+  fibarray[n]
 end
