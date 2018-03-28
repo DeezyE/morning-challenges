@@ -21,7 +21,7 @@
 # Check your answers by running the tests:
 # ruby tests/15_exes_and_ohs_test.rb
 #
-
 def ExesAndOhs(string)
-  # yo' co' here
+  string_array = string.downcase.scan(/\w/)
+  return string_array.count("x") == string_array.count("o") ? true : false
 end
