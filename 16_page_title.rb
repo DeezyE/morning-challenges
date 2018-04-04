@@ -12,6 +12,11 @@
 # ruby tests/16_page_title_test.rb
 #
 
+require 'net/http'
+
+
 def pageTitle(url)
-  # your code here
+resBody = Net::HTTP.get_response(URI(url)).body
+sub_string = /<title>(.*)<\/title>/.match(resBody)
+sub_string[1]
 end

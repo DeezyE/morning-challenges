@@ -11,3 +11,19 @@
 # Let the tests help you :)
 # ruby tests/17_group_fives_test.rb
 #
+
+def divisible_by_five(number)
+  number % 5 == 0
+end
+
+def group_fives(numbers)
+  finalArray = [fives = [], non_fives = []]
+  numbers.each do |arNum|
+    if divisible_by_five(arNum) == true
+      fives.push arNum
+    else
+      non_fives.push arNum
+    end
+  end
+  finalArray
+end
