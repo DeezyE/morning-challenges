@@ -15,5 +15,19 @@
 #
 
 def calculate_income_tax (income)
-  # Your code here!
+  calculate_income_tax = {income: income, tax: 0, income_after_tax: income}
+  if income >= 180001
+    calculate_income_tax[:tax] = (54232 + ((income-180000)*0.45)).to_i
+    calculate_income_tax[:income_after_tax] = income-calculate_income_tax[:tax]
+  elsif income >= 87001
+    calculate_income_tax[:tax] = (19822 + ((income-87000)*0.37)).to_i
+    calculate_income_tax[:income_after_tax] = income-calculate_income_tax[:tax]
+  elsif income >= 37001
+    calculate_income_tax[:tax] = 3572 + ((income-37000)*0.325).to_i
+    calculate_income_tax[:income_after_tax] = income-calculate_income_tax[:tax]
+  elsif income >= 18201
+    calculate_income_tax[:tax] = ((income-18200)*0.19).to_i
+    calculate_income_tax[:income_after_tax] = income-calculate_income_tax[:tax]
+  end
+  calculate_income_tax
 end

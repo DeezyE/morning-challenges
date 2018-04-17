@@ -21,3 +21,18 @@
 # water sell for $6, and cost $0.15 to make
 
 # print out the total profit for the orders you have
+
+timeToWork = 30
+puts "I took #{timeToWork} minutes to get to work"
+
+puts ""
+ppCocktails = 3
+ppWaters = 2
+ppBeers = 6
+
+puts "Please enter your drink (cocktail, water or beer)"
+puts "q to exit"
+order = gets.chomp
+ppCocktails += 1 if order == cocktail
+ppWater += 1 if order == water
+ppBeer += 1 if order == beer
