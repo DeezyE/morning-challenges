@@ -8,3 +8,10 @@
 # Head office want a complete sku list with no duplicates.
 
 # Easy to do right? Now try working it out with three lines of code, you should be able to do it with 6 words and some operators and syntax.
+def add_remove_duplicates(array1,array2)
+
+final = (array1 + array2).uniq!
+
+end
+
+# array1 | array2
