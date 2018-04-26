@@ -24,5 +24,37 @@
 #
 
 class Dictionary
-  # Your code here
+  def initialize
+    @dictionary_array = []
+  end
+
+  def add_word(word, definition)
+    @dictionary_array = @dictionary_array.push(word,definition)
+  end
+
+  def total_words
+    @dictionary_array.length/2
+  end
+
+  def lookup(word)
+    index = 0
+    @dictionary_array.each do |item|
+      if word == item
+        return @dictionary_array[index+1]
+      else
+        index += 1
+      end
+    end
+  end
+
 end
+
+# dictionary = Dictionary.new
+#
+#
+# dictionary.add_word("car","It's a vehicle")
+# dictionary.add_word("chicken","is burd")
+# dictionary.add_word("gun","is happines")
+# dictionary.add_word("sun","a star")
+# dictionary.total_words
+# dictionary.lookup("gun")
